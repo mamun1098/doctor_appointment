@@ -1,0 +1,25 @@
+.section-title {
+    span {
+        font-size: 20px;
+        color: $primary-theme;
+        font-weight: 300;
+        margin-bottom: 10px;
+        text-transform: capitalize;
+    }
+    h3 {
+        font-size: 25px;
+        color: $black;
+        line-height: 45px;
+        font-weight: 700;
+        text-transform: capitalize;
+        @media (max-width: 991px) {
+            font-size: 25px;
+            line-height: 40px;
+        }
+    }
+    p {
+        font-size: 16px;
+        color: $black-ash;
+        margin-top: 15px;
+    }
+}
