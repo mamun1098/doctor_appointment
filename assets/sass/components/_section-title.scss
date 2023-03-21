@@ -23,3 +23,18 @@
         margin-top: 15px;
     }
 }
+
+.camp-link{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    li {
+        margin: 0 3px;
+        color: $body-color;
+        font-weight: 500;
+        a {
+            color: $black-ash;
+            font-weight: 300;
+        }
+    }
+}

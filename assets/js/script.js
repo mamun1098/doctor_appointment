@@ -1,14 +1,44 @@
-
-
-//mobile menu start 
 $(".mobile-btn").click(function(){
-    $(".responsive-menu").toggleClass("active");
-    $(".blank-div").toggleClass("active");    
-  });
+  $(".responsive-menu").toggleClass("active");
+  $(".blank-div").toggleClass("active");    
+});
 $(".blank-div").click(function(){
-    $(".responsive-menu").removeClass("active");
-  });
-//mobile menu end
+  $(".responsive-menu").removeClass("active");
+  $(this).removeClass("active")
+});
+
+// header include 
+// function includeHTML() {
+//   var z, i, elmnt, file, xhttp;
+//   /* Loop through a collection of all HTML elements: */
+//   z = document.getElementsByTagName("*");
+//   for (i = 0; i < z.length; i++) {
+//     elmnt = z[i];
+//     /*search for elements with a certain atrribute:*/
+//     file = elmnt.getAttribute("w3-include-html");
+//     if (file) {
+//       /* Make an HTTP request using the attribute value as the file name: */
+//       xhttp = new XMLHttpRequest();
+//       xhttp.onreadystatechange = function() {
+//         if (this.readyState == 4) {
+//           if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+//           if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+//           /* Remove the attribute, and call this function once more: */
+//           elmnt.removeAttribute("w3-include-html");
+//           includeHTML();
+//         }
+//       }
+//       xhttp.open("GET", file, true);
+//       xhttp.send();
+//       /* Exit the function: */
+//       return;
+//     }
+//   }
+// }
+// includeHTML()
+
+// header include end 
+
 
 // service like active 
 $('.like').on('click',function(){
@@ -42,7 +72,7 @@ $('.active-service').slick({
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 576,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -74,10 +104,10 @@ $('.active-testimoni').slick({
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToShow: 1,
+          slidesToScroll: 1
         }
       },
       {
@@ -143,3 +173,24 @@ $('.brand-active').slick({
       // instead of a settings object
     ]
 });
+
+//pagination active
+
+$('.pagination-list a').on('click',function(){
+  $('.pagination-list a').removeClass('active');
+  $(this).addClass('active')
+})
+
+// appointment button click
+$('#mine_btn').on('click',function(){
+  $('#other_btn').removeClass('active')
+  $(this).addClass('active')
+  $('.for-others').addClass('d-none')
+})
+
+$('#other_btn').on('click',function(){
+  $('#mine_btn').removeClass('active')
+  $(this).addClass('active')
+  $('.for-others').addClass('d-block').removeClass('d-none')
+
+})

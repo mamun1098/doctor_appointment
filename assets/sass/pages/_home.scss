@@ -3,6 +3,9 @@
 .help-wrap {
     align-items: center;
     column-gap: 15px;
+    h5 {
+        display: none;
+    }
     .help-icon {
         line-height: 60px;
         font-size: 50px;
@@ -385,9 +388,12 @@
     }
     .member-name {
         h6{
-            font-size: 18px;
-            line-height: 35px;
-            transition: .4s;
+            a {
+                font-size: 18px;
+                line-height: 35px;
+                transition: .4s;
+                color: $black-ash;
+            }
         }
         p {
             font-size: 15px;
@@ -419,7 +425,9 @@
         }
         .member-name {
             h6 {
-                color: $white;
+                a {
+                    color: $white;
+                }
             }
             p {
                 color: $white;
@@ -450,6 +458,10 @@
     background: $white;
     position: relative;
     margin: 0 5px;
+    transition: all .3s ease;
+    &:hover {
+        border: 7px solid #e22356;
+    }
 }
 .rating {
     margin-bottom: 10px;
@@ -508,6 +520,9 @@
         top: -110px;
         right: 0;
         transition: .3s ease;
+        @media (max-width: 576px) {
+            top: -140px;
+        }
         &:hover {
             background: $primary-theme;
             color: $white;
@@ -672,6 +687,11 @@
 
 
 // partner section start 
+.brand-area {
+    h5 {
+        display: none;
+    }
+}
 .brand-active {
     ul.slick-dots {
         display: none;

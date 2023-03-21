@@ -4,7 +4,7 @@
     .blank-div{
         position: absolute;
         z-index: 1;
-        height: 600px;
+        height: 700px;
         width: 100%;
         top: 0;
         left: 0;
@@ -54,6 +54,9 @@
         align-items: center;
         li {
             margin-right: 20px;
+            @media (max-width: 600px) {
+                margin-right: 10px;
+            }
             @media (max-width: 480px) {
                 margin-right: 5px;
             }
@@ -71,6 +74,7 @@
     .login-btn {
         border-radius: 0px;
         padding: 0 30px;
+        border: 1px solid $primary-theme;
         @media (max-width: 400px) {
             padding: 0 15px;
         }
